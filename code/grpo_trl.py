@@ -31,13 +31,13 @@ from peft import PeftModel, LoraConfig, get_peft_model, prepare_model_for_kbit_t
 
 # ============ 配置 ============
 # 模型路径
-BASE_MODEL_PATH = 'unsloth/Qwen2.5-1.5B-Instruct'  # 基础模型 (与SFT训练时相同)
+BASE_MODEL_PATH = 'unsloth/Qwen3-1.7B'  # 基础模型 (与SFT训练时相同)
 SFT_LORA_PATH = 'model/zh_actor_sft'  # SFT训练的LoRA权重
 RM_MODEL_PATH = '../../humor_ppo_qwen3-4b-true/code/new_code2.12/code_zh/RM/model/zh_reward_model_deberta'
 RM_TOKENIZER_PATH = 'IDEA-CCNL/Erlangshen-DeBERTa-v2-97M-Chinese'
 
 # 定义合并后模型的保存路径
-MERGED_MODEL_DIR = "model/qwen2.5_1.5b_sft_merged"
+MERGED_MODEL_DIR = "model/qwen3_1.7b_sft_merged"
 
 # 数据路径
 TRAIN_DATA_FILE = '../pre_data/zh_humor_with_prompts.csv'
@@ -565,3 +565,4 @@ print(f"  tensorboard --logdir={OUTPUT_DIR}/logs")
 print("\n" + "=" * 80)
 print("GRPO训练完成！")
 print("=" * 80)
+
