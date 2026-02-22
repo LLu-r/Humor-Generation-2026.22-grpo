@@ -159,8 +159,13 @@ LORA_DROPOUT = 0.05
 
 ![train loss](images/train_loss.png)
 
-![reward](images/train_reward.png)
+![train_reward](images/train_reward.png)
 
-![KL](images/train_kl.png)
+![train_reward_std](images/train_reward_std.png)
 
+![train_kl](images/train_kl.png)
+
+![train_clip_ratio_high_mean](images/train_clip_ratio_high_mean.png)
+
+![train_clip_ratio_low_mean](images/train_clip_ratio_low_mean.png)
 
