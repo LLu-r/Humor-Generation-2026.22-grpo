@@ -2,7 +2,7 @@
 步骤3: GRPO训练 (中文幽默生成)
 
 GRPO设计:
-- Policy: SFT后的Qwen3-4B (可训练, 4-bit + LoRA)
+- Policy: SFT后的Qwen3-1.7B (可训练, 4-bit + LoRA)
 - RM: 训练好的DeBERTa打分模型 (frozen, 用于计算reward)
 
 Reward流程:
@@ -31,7 +31,7 @@ from peft import PeftModel, LoraConfig, get_peft_model, prepare_model_for_kbit_t
 
 # ============ 配置 ============
 # 模型路径
-BASE_MODEL_PATH = 'unsloth/Qwen3-1.7B'  # 基础模型 (与SFT训练时相同)
+BASE_MODEL_PATH = 'Qwen/Qwen3-1.7B'  # 基础模型 (与SFT训练时相同)
 SFT_LORA_PATH = 'model/zh_actor_sft'  # SFT训练的LoRA权重
 RM_MODEL_PATH = '../../humor_ppo_qwen3-4b-true/code/new_code2.12/code_zh/RM/model/zh_reward_model_deberta'
 RM_TOKENIZER_PATH = 'IDEA-CCNL/Erlangshen-DeBERTa-v2-97M-Chinese'
@@ -565,5 +565,6 @@ print(f"  tensorboard --logdir={OUTPUT_DIR}/logs")
 print("\n" + "=" * 80)
 print("GRPO训练完成！")
 print("=" * 80)
+
 
 
