@@ -50,7 +50,7 @@ OUTPUT_DIR = 'model/zh_grpo_trl'
 LEARNING_RATE = 1e-6
 BATCH_SIZE = 16
 GRADIENT_ACCUMULATION_STEPS = 1
-EPOCHS = 3
+EPOCHS = 2
 LOGGING_STEPS = 10
 SAVE_STEPS = 100
 
@@ -565,4 +565,5 @@ print(f"  tensorboard --logdir={OUTPUT_DIR}/logs")
 print("\n" + "=" * 80)
 print("GRPO训练完成！")
 print("=" * 80)
+
 
