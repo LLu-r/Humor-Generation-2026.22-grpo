@@ -116,7 +116,7 @@ prompt模板于sft一致，便于后续 GRPO 时生成内容与评测内容对�
 
 ```python
 GRPO设计:
-- Policy: SFT后的Qwen3-4B (可训练, 4-bit + LoRA)
+- Policy: SFT后的Qwen3-1.7B (可训练, 4-bit + LoRA)
 - RM: 训练好的DeBERTa打分模型 (frozen, 用于计算reward)
 
 Reward流程:
