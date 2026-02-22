@@ -2,6 +2,19 @@
 
 ## 训练数据来源和说明
 
+### 来源
+
+中文幽默检测数据来源：https://github.com/DUTIR-Emotion-Group/CCL2019-Chinese-Humor-Computation/tree/master/task1
+
+### 本次任务的数据说明
+
+源数据集的数据格式为  jokes：is_humor。
+
+我们的任务为：给定一个 headline 或者 two words，让模型生成幽默文本。所以理想训练数据应该包含 headline, two words, joke, label。观察 SemEval 给出的数据发现，给出的 two words 是一个动词一个名词。
+
+### pre_data
+
+目前只有 joke 和 label 为了得到理想的数据，我选用已有的大模型 Qwen2.5-7B-Instruction ，输入joke 让模型生成相应的 headline 和 two words 整理好数据于pre_data中。
 
 
 ## SFT
