@@ -138,6 +138,10 @@ LORA_DROPOUT = 0.05
 
 本次 SFT 时加入了 EOS token 模型生成会自动停止，另外，模型缩小，数据量扩大，所以先尝试单一的奖励，奖励为RM对策略模型生成内容打出的分数。
 
+训练完成后，我按照训练 prompt 模板测试了几条生成内容，发现没有乱码了。
+
+&nbsp;
+
 #### TensorBoard 绘图
 
 ![train loss](images/train_loss.png)
